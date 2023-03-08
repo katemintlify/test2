@@ -1,0 +1,61 @@
+---
+title: "Running tests"
+---
+
+## Introduction to running Snyk tests
+
+You can use Snyk to test your code in different ways:
+
+* [Run tests manually](/getting-started/running-tests#run-tests-manually): using the Snyk CLI, the Snyk Web UI, and the Snyk API
+
+* [Run tests automatically](/getting-started/running-tests#run-tests-automatically): after Project import, using the `snyk monitor` CLI command, or using PR Checks to scan new PRs
+
+Tests may be limited on your account; see [What counts as a test?](https://support.snyk.io/hc/en-us/articles/360000925418-What-counts-as-a-test-) for more information.
+
+## Run tests manually
+
+### Run tests manually with the CLI
+
+With the Snyk [CLI](/snyk-cli/cli-reference) you can use the following commands:
+
+* Scan open-source code with `snyk test`.
+
+* Scan application code with `snyk code test`.
+
+* Scan container images with `snyk container test`.
+
+* Scan Infrastructure as Code (IaC) files with `snyk iac test`.
+
+See [Getting started with the CLI](/snyk-cli/getting-started-with-the-cli) for details.
+
+### Run tests manually with the Snyk Web UI
+
+A test is run when you import a Snyk Project (see [Import a Project](/getting-started/quickstart/import-a-project)), or click the **Retest now** button on a Project in the Overview tab.
+
+See [Exploring the Snyk Web UI](/getting-started/getting-started-with-the-snyk-web-ui) for details.
+
+### Run tests manually with the API
+
+Tests are counted when calls are made to the **https://snyk.io/api/v1/test** endpoint.
+
+See the [API documentation](https://snyk.docs.apiary.io/#reference/test) for details.
+
+## Run tests automatically
+
+### Run tests automatically with the Snyk Web UI
+
+After you [import a Project](/getting-started/quickstart/import-a-project), Snyk automatically runs periodic scans on that Project, to see if your code is affected by newly disclosed vulnerabilities.
+
+Test frequency is set to daily by default. To change frequency, go to the **Usage** page (see [Usage page details](/user-and-group-management/managing-settings/usage-page-details)), the project **Settings** page (see [View project settings](/manage-issues/introduction-to-snyk-projects/view-project-settings)) or use the Snyk REST API: [Updates project by project ID](https://apidocs.snyk.io/?version=2023-02-15#patch-/orgs/-org%5Fid-/projects/-project%5Fid-).
+
+### Run tests automatically with snyk monitor
+
+Use the `snyk monitor` CLI command to create a snapshot of a project on the Snyk website that will be continuously monitored for new vulnerabilities.
+
+See [Monitor your projects at regular intervals](/snyk-cli/test-for-vulnerabilities/monitor-your-projects-at-regular-intervals) for details.
+
+### Run tests automatically using PR Checks
+
+Snyk can scan every new Pull Request (PR) submitted on your monitored repositories, to help prevent new vulnerabilities from being added to your codebase.
+
+See [Run PR Checks](/scan-application-code/run-pr-checks) for details.

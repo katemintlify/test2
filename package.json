@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@code-hike/mdx": "^0.8.0"
+  }
+}
