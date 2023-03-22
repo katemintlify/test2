@@ -41,7 +41,7 @@
   "navigation": [
     {
       "group": "Home",
-      "pages": ["introduction", "development"]
+      "pages": ["introduction", "development", "pricing-models"]
     },
     {
       "group": "Learn More",
